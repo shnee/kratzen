@@ -1,4 +1,4 @@
-package net.shnee.mlparser;
+package net.shnee.kratzen.parser;
 
 import java.io.File;
 import java.io.IOException;
@@ -7,7 +7,8 @@ import java.net.URL;
 import java.text.ParseException;
 import java.util.Arrays;
 import java.util.Collection;
-import net.shnee.mlparser.logger.MarkupLangParserLogger;
+import net.shnee.kratzen.logger.MarkupLangParserLogger;
+import net.shnee.kratzen.utils.KratzenUtils;
 import org.apache.commons.io.FileUtils;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -90,7 +91,7 @@ public class MarkupLangParserTest {
         this.parser.parse();
 
         try {
-            parser.setSource(ParserUtils.downloadURLSource(this.googleURL));
+            parser.setSource(KratzenUtils.downloadURLSource(this.googleURL));
             assertNotEquals(this.source, parser.getSource());
             assertNotEquals("", parser.getURL());
             assertTrue(parser.downloaded());
@@ -116,7 +117,7 @@ public class MarkupLangParserTest {
         this.parser.setURL(this.yahooURL);
         assertFalse(this.parser.downloaded());
         assertFalse(this.parser.parsed());
-        String yahooSrc = ParserUtils.downloadURLSource(this.yahooURL);
+        String yahooSrc = KratzenUtils.downloadURLSource(this.yahooURL);
         assertEquals(yahooSrc, this.parser.downloadSource());
         assertEquals(yahooSrc, this.parser.getSource());
 

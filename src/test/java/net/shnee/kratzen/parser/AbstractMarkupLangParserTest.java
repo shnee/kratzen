@@ -1,11 +1,11 @@
-package net.shnee.mlparser;
+package net.shnee.kratzen.parser;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.text.ParseException;
 import java.util.Arrays;
 import java.util.Collection;
-import net.shnee.mlparser.logger.MarkupLangParserLogger;
+import net.shnee.kratzen.logger.MarkupLangParserLogger;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
