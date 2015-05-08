@@ -5,7 +5,7 @@ import java.net.MalformedURLException;
 import java.text.ParseException;
 import java.util.Arrays;
 import java.util.Collection;
-import net.shnee.kratzen.logger.MarkupLangParserLogger;
+import net.shnee.kratzen.logger.KratzenLogger;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -25,12 +25,12 @@ public class AbstractMarkupLangParserTest {
 
     @Parameterized.Parameters
     public static Collection<Object[]> instancesToTest() {
-        Object[][] data = new Object[][] { {new ShneeParser()} };
+        Object[][] data = new Object[][] { {new KratzenParser()} };
         return Arrays.asList(data);
     }
 
     private AbstractMarkupLangParser parser = null;
-    private final Logger logger = MarkupLangParserLogger.MLPARSER_TESTS;
+    private final Logger logger = KratzenLogger.MLPARSER_TESTS;
     private final String url = "http://www.yahoo.com";
 
     public AbstractMarkupLangParserTest(AbstractMarkupLangParser parser) {

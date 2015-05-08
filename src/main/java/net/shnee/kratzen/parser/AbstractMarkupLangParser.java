@@ -3,7 +3,7 @@ package net.shnee.kratzen.parser;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.text.ParseException;
-import net.shnee.kratzen.logger.MarkupLangParserLogger;
+import net.shnee.kratzen.logger.KratzenLogger;
 import net.shnee.kratzen.utils.KratzenUtils;
 import org.apache.commons.validator.UrlValidator;
 import org.slf4j.Logger;
@@ -30,7 +30,7 @@ public abstract class AbstractMarkupLangParser implements MarkupLangParser {
     static public final String manualSourceURL = "manual";
 
     /** Logger for MarkupLangParser. */
-    protected Logger logger = MarkupLangParserLogger.MLPARSER;
+    protected Logger logger = KratzenLogger.MLPARSER;
 
     /**
      * Empty constructor for AbstractMarkupLangParser. getSource() and getUrl()
